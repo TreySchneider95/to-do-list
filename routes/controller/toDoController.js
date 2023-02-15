@@ -8,11 +8,9 @@ async function getAllTasks(req, res, next) {
       sucess:true,
       tasks: tasks
     });
-
-    
 }
 
 
 module.exports = {
-    getAllBlogs,
+    getAllTasks,
 }
