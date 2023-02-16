@@ -12,10 +12,10 @@ const {v4: uuidv4} = require("uuid")
 const taskSchema = new mongoose.Schema({
     name: String,
     description: String,
-    completed: {type: Boolean, default: false, validation: required},
-    dateCreated: {type: Date, default: Date.now, validation: required},
+    completed: {type: Boolean, default: false, required: true},
+    dateCreated: {type: Date, default: Date.now, required: true},
     dateCompleted: {type: Date},
-    status: {type: String, default: "incomplete", validation: required, enum: ["incomplete", "complete", "deferred"]},
+    status: {type: String, default: "incomplete", required: true, enum: ["incomplete", "complete", "deferred"]},
     id: {type: String, default: uuidv4()},
 })
 
